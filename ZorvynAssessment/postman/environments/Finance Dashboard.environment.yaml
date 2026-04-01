@@ -1,0 +1,22 @@
+name: Finance Dashboard
+values:
+  - key: baseUrl
+    value: 'http://127.0.0.1:8000'
+    enabled: true
+    type: default
+  - key: accessToken
+    value: ''
+    enabled: true
+    type: default
+  - key: refreshToken
+    value: ''
+    enabled: true
+    type: default
+  - key: userId
+    value: ''
+    enabled: true
+    type: default
+  - key: transactionId
+    value: ''
+    enabled: true
+    type: default

@@ -1,0 +1,8 @@
+$kind: http-request
+name: Get Transaction
+method: GET
+url: '{{baseUrl}}/api/transactions/{{transactionId}}/'
+order: 3000
+headers:
+  - key: Authorization
+    value: 'Bearer {{accessToken}}'

@@ -1,0 +1,22 @@
+$kind: http-request
+name: 'Create User (Admin)'
+method: POST
+url: '{{baseUrl}}/api/users/manage/'
+order: 3000
+headers:
+  - key: Authorization
+    value: 'Bearer {{accessToken}}'
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "username": "newuser",
+      "email": "newuser@example.com",
+      "password": "securepassword123",
+      "first_name": "New",
+      "last_name": "User",
+      "role": "ANALYST",
+      "is_active": true
+    }

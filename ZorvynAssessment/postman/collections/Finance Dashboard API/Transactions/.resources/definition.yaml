@@ -1,0 +1,16 @@
+$kind: folder
+name: Transactions
+description: |-
+  Endpoints for managing financial transactions (income and expenses).
+  
+  - **List & Get** — available to all authenticated users (VIEWER, ANALYST, ADMIN).
+  - **Create, Update, Delete** — restricted to **ADMIN** role.
+  
+  ### Transaction Fields
+  | Field | Type | Description |
+  |-------|------|-------------|
+  | `amount` | decimal | Transaction amount (positive number) |
+  | `type` | string | `INCOME` or `EXPENSE` |
+  | `category` | string | Category label (e.g. Salary, Rent) |
+  | `date` | date | Transaction date (`YYYY-MM-DD`) |
+  | `notes` | string | Optional notes |

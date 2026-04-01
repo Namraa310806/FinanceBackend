@@ -1,0 +1,8 @@
+$kind: http-request
+name: Delete Transaction
+method: DELETE
+url: '{{baseUrl}}/api/transactions/{{transactionId}}/'
+order: 6000
+headers:
+  - key: Authorization
+    value: 'Bearer {{accessToken}}'

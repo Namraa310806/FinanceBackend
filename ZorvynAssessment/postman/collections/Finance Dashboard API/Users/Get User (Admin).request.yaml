@@ -1,0 +1,11 @@
+$kind: http-request
+name: 'Get User (Admin)'
+method: GET
+url: '{{baseUrl}}/api/users/manage/{{userId}}/'
+order: 4000
+headers:
+  - key: Authorization
+    value: 'Bearer {{accessToken}}'
+pathVariables:
+  - key: userId
+    value: '{{userId}}'

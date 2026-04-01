@@ -1,0 +1,6 @@
+$kind: folder
+name: Auth
+description: |-
+  Endpoints for user registration, login, and JWT token management.
+  
+  No authentication is required for any of these endpoints. After a successful login, store the returned `access` token in the `accessToken` environment variable and the `refresh` token in `refreshToken`.

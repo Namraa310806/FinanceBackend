@@ -1,0 +1,21 @@
+$kind: http-request
+name: 'Update User (Admin)'
+method: PUT
+url: '{{baseUrl}}/api/users/manage/{{userId}}/'
+order: 5000
+headers:
+  - key: Authorization
+    value: 'Bearer {{accessToken}}'
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "username": "updateduser",
+      "email": "updated@example.com",
+      "first_name": "Updated",
+      "last_name": "User",
+      "role": "ANALYST",
+      "is_active": true
+    }

@@ -1,0 +1,37 @@
+$kind: http-request
+name: List Transactions
+method: GET
+url: '{{baseUrl}}/api/transactions/'
+order: 1000
+headers:
+  - key: Authorization
+    value: 'Bearer {{accessToken}}'
+queryParams:
+  - key: start_date
+    value: ''
+    description: 'Filter by start date (YYYY-MM-DD)'
+    disabled: true
+  - key: end_date
+    value: ''
+    description: 'Filter by end date (YYYY-MM-DD)'
+    disabled: true
+  - key: category
+    value: ''
+    description: Filter by category
+    disabled: true
+  - key: type
+    value: ''
+    description: 'Filter by type: INCOME or EXPENSE'
+    disabled: true
+  - key: search
+    value: ''
+    description: 'Search category, notes, type'
+    disabled: true
+  - key: page
+    value: ''
+    description: Page number (integer)
+    disabled: true
+  - key: page_size
+    value: ''
+    description: 'Page size (integer, max 100)'
+    disabled: true

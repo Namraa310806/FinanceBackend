@@ -1,0 +1,16 @@
+$kind: http-request
+name: 'Partial Update User (Admin)'
+method: PATCH
+url: '{{baseUrl}}/api/users/manage/{{userId}}/'
+order: 6000
+headers:
+  - key: Authorization
+    value: 'Bearer {{accessToken}}'
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "role": "ADMIN"
+    }

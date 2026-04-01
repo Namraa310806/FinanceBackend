@@ -1,0 +1,20 @@
+$kind: http-request
+name: Update Transaction
+method: PUT
+url: '{{baseUrl}}/api/transactions/{{transactionId}}/'
+order: 4000
+headers:
+  - key: Authorization
+    value: 'Bearer {{accessToken}}'
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "amount": "200.00",
+      "type": "EXPENSE",
+      "category": "Utilities",
+      "date": "2025-01-20",
+      "notes": "Electricity bill"
+    }

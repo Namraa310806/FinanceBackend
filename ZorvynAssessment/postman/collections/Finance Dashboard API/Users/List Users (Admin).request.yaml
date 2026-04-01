@@ -1,0 +1,8 @@
+$kind: http-request
+name: 'List Users (Admin)'
+method: GET
+url: '{{baseUrl}}/api/users/manage/'
+order: 2000
+headers:
+  - key: Authorization
+    value: 'Bearer {{accessToken}}'

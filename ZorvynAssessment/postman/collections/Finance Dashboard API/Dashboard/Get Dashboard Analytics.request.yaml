@@ -1,0 +1,8 @@
+$kind: http-request
+name: Get Dashboard Analytics
+method: GET
+url: '{{baseUrl}}/api/dashboard/analytics/'
+order: 1000
+headers:
+  - key: Authorization
+    value: 'Bearer {{accessToken}}'

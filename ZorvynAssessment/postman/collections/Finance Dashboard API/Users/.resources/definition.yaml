@@ -1,0 +1,7 @@
+$kind: folder
+name: Users
+description: |-
+  Endpoints for managing user accounts.
+  
+  - **Get Current User** — available to any authenticated user.
+  - **Admin endpoints** (`/api/users/manage/`) — restricted to users with the **ADMIN** role. These allow listing, creating, updating, and deleting user accounts.

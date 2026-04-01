@@ -1,0 +1,16 @@
+$kind: http-request
+name: Partial Update Transaction
+method: PATCH
+url: '{{baseUrl}}/api/transactions/{{transactionId}}/'
+order: 5000
+headers:
+  - key: Authorization
+    value: 'Bearer {{accessToken}}'
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "notes": "Updated notes"
+    }

@@ -1,0 +1,9 @@
+$kind: folder
+name: Dashboard
+description: |-
+  Endpoints for aggregated financial analytics and summary data.
+  
+  Restricted to users with **ANALYST** or **ADMIN** roles.
+  
+  - **Analytics** — detailed breakdown of income vs expenses by category and time period.
+  - **Summary** — high-level totals: total income, total expenses, and net balance.
