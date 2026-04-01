@@ -27,6 +27,14 @@ class UserSerializer(serializers.ModelSerializer):
 class RegisterSerializer(serializers.ModelSerializer):
     """Serializer for public user registration."""
 
+    role = serializers.ChoiceField(
+        choices=User.Role.choices,
+        required=False,
+        default=User.Role.VIEWER,
+        error_messages={
+            'invalid_choice': 'Role must be VIEWER, ANALYST, or ADMIN.',
+        },
+    )
     password = serializers.CharField(
         write_only=True,
         min_length=8,
@@ -38,7 +46,7 @@ class RegisterSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('username', 'email', 'password', 'first_name', 'last_name')
+        fields = ('username', 'email', 'password', 'role', 'first_name', 'last_name')
 
     def validate_password(self, value):
         validate_password(value)
@@ -55,7 +63,7 @@ class RegisterSerializer(serializers.ModelSerializer):
         return value
 
     def create(self, validated_data):
-        validated_data['role'] = User.Role.VIEWER
+        validated_data.setdefault('role', User.Role.VIEWER)
         return User.objects.create_user(**validated_data)
 
 
